@@ -152,7 +152,6 @@ h2 {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
   text-align: center;
   max-width: 100%;
-  width: auto;
   text-align: center;
 
   &::after {
