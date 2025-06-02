@@ -98,8 +98,10 @@ body::before {
 }
 
 #menu {
-  padding: 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 15x;
 }
 
 #menu a {
@@ -152,16 +154,18 @@ h2 {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
   text-align: center;
   width: 100%;
+  max-width: 250px;
   text-align: center;
   margin: 10px 0;
-  overflow: visible;
-  background-color: #27071b;
+  background-color: #4d0627;
   color: white;
   text-align: center;
   border-radius: 12px;
   position: relative;
   z-index: 1;
   padding: 5px;
+  overflow-wrap: break-word;
+
 }
   .card p::after {
     position: absolute;
@@ -198,7 +202,7 @@ h4 {
 }
 p {
   text-align: center;
-  display: inline;
+  display: block;
 }
 
 table {
@@ -380,3 +384,42 @@ footer {
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 600px) {
+    .gallery img {
+      gap: 15px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (hover: none) {
+    .gallery img {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  .gallery img {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .card p {
+    max-width: 90%;
+  }
+
+  .contact-card,
+  .about-card {
+    padding: 20px;
+    max-width: 95%;
+  }
+} 
